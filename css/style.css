@@ -1,0 +1,235 @@
+/****** Mixins ******/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  height: 13vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: #2e2e2e;
+  color: white;
+}
+
+@media only screen and (max-width: 470px) {
+  nav {
+    font-size: small;
+  }
+}
+
+nav .logo {
+  width: 49%;
+  text-align: center;
+  height: 90%;
+  color: yellow;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .logo .title {
+  font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 470px) {
+  nav .logo .title {
+    font-size: 1.5rem;
+  }
+}
+
+nav .logo .motto {
+  font-size: smaller;
+}
+
+nav .nav-menu {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+}
+
+@media only screen and (max-width: 470px) {
+  nav .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+section {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: 470px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+  }
+}
+
+section .shipping {
+  width: 60%;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 470px) {
+  section .shipping {
+    width: 90%;
+  }
+}
+
+section .shipping .top {
+  padding: 15px;
+}
+
+section .shipping form fieldset {
+  margin: 10px 0;
+  padding: 0;
+  border: 0;
+  width: 70%;
+  position: relative;
+}
+
+section .shipping form fieldset:first-child input {
+  border-radius: 4px 4px 0 0;
+}
+
+section .shipping form fieldset:last-child input {
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+section .shipping form fieldset + fieldset {
+  border-top: 1px solid #ddd;
+}
+
+@media only screen and (max-width: 470px) {
+  section .shipping form fieldset {
+    width: 90%;
+  }
+}
+
+section .shipping form input {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  padding: 16px 8px;
+  border: 0;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  background: #eee7e7;
+  color: #212121;
+  outline: 0;
+  appearance: none;
+  transition: all 0.2s ease-in-out;
+}
+
+section .shipping form input[data-empty="false"], section .shipping form input:valid, section .shipping form input:focus {
+  padding: 22px 8px 10px;
+}
+
+section .shipping form input:focus {
+  outline: 0;
+  background: white;
+}
+
+section .shipping form input[data-empty="false"] + label,
+section .shipping form input:valid + label,
+section .shipping form input:focus + label {
+  color: #5856D6;
+  font-weight: 700;
+  font-size: 12px;
+  transform: translate3d(0, -10px, 0);
+}
+
+section .shipping form label {
+  position: absolute;
+  top: 15px;
+  left: 8px;
+  color: color;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease-in-out;
+}
+
+section .summary {
+  padding: 20px 10px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: nill;
+}
+
+@media only screen and (max-width: 470px) {
+  section .summary {
+    width: 90%;
+  }
+}
+
+section .summary .summary-top {
+  padding: 15px 0;
+}
+
+section .summary .details .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+section .summary .total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-top: 1px solid grey;
+}
+
+article {
+  padding: 20px 0 50px 0;
+}
+
+article button {
+  padding: 10px 20px;
+  border: 1px solid #56baf8;
+  background: #56baf8;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+article button:hover {
+  border: 1px solid black;
+  background: white;
+  color: black;
+}
