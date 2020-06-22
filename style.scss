@@ -1,0 +1,202 @@
+/****** Mixins ******/
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin mediaQuery($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+@mixin border($color) {
+    border: 1px solid $color;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    //width: 100vw;
+    @include flex(column, center, center);
+    
+}
+
+
+nav {
+    width: 100%;
+    height: 13vh;
+    @include flex(row, space-around, center);
+    background: rgb(46, 46, 46);
+    color: white;
+    @include mediaQuery(470px) {
+        font-size: small;
+    }
+
+    .logo{
+        width: 49%;
+        text-align: center;
+        height: 90%;
+        color: yellow;
+        cursor: pointer;
+        @include flex(column, center, center);
+
+        .title{
+            font-size: 2.5rem;
+            @include mediaQuery(470px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .motto{
+            font-size: smaller;
+        }
+    }
+
+    .nav-menu{
+        width: 50%;
+        @include flex(row, space-around, center);
+        height: 90%;
+        @include mediaQuery(470px) {
+            @include flex(column, space-around, center);
+        }
+    }
+}
+
+section {
+    width: 85%;
+    @include flex(row, space-between, flex-start);
+    padding: 20px 0;
+    @include mediaQuery(470px) {
+        @include flex(column, space-around, center);
+        padding: 20px 0;
+    }
+
+    .shipping{
+        width: 60%;
+        padding: 10px;
+        @include mediaQuery(470px) {
+            width: 90%;
+        }
+
+        .top{
+            padding: 15px;
+        }
+
+        form{
+            fieldset{
+                margin: 10px 0;
+                padding: 0;
+                border: 0;
+                width: 70%;
+                position: relative;
+                &:first-child input {
+                    border-radius: 4px 4px 0 0;
+                }
+                &:last-child input {
+                    border-radius: 0 0 4px 4px;
+                    box-shadow: 0 2px 0 rgba(0,0,0,0.15);
+                }
+                & + fieldset { border-top: 1px solid #ddd; }
+                @include mediaQuery(470px) {
+                    width: 90%;
+                }
+            }
+
+            input{
+                display: block;
+                width: 100%;
+                height: 3rem;
+                padding: 16px 8px;
+                border: 0;
+                border-radius: 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1;
+                background: rgb(238, 231, 231);
+                color: #212121;
+                outline: 0;
+                appearance: none;
+                transition: all 0.2s ease-in-out;
+
+                /// Animation
+                &[data-empty="false"],
+                &:valid,
+                &:focus {
+                    padding: 22px 8px 10px;
+                }
+                &:focus {
+                    outline: 0;
+                    background: rgba(255,255,255,1);
+                }
+                &[data-empty="false"] + label,
+                &:valid + label,
+                &:focus + label {
+                    color: #5856D6;
+                    font-weight: 700;
+                    font-size: 12px;
+                    transform: translate3d(0, -10px, 0);
+                }
+            }
+
+            label {
+                position: absolute;
+                top: 15px;
+                left: 8px;
+                color: color;
+                transform: translate3d(0, 0, 0);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+
+    .summary {
+        padding: 20px 10px;
+        width: 35%;
+        @include flex(column, center, nill);
+        @include mediaQuery(470px) {
+            width: 90%;
+        }
+
+        .summary-top{
+            padding: 15px 0;
+        }
+
+        .details{
+            .list{
+                @include flex(row, space-between, center);
+                padding: 10px;
+            }
+        }
+
+        .total{
+            @include flex(row, space-between, center);
+            padding: 5px;
+            border-top: 1px solid grey;
+        }
+    }
+}
+
+article {
+    padding: 20px 0 50px 0;
+
+
+    button {
+        padding: 10px 20px;
+        @include border(rgb(86, 186, 248));
+        background: rgb(86, 186, 248);
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-weight: bolder;
+
+        &:hover{
+            @include border(black);
+            background: white;
+            color: black;
+        }
+    }
+}
