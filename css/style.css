@@ -23,7 +23,7 @@ nav {
   color: white;
 }
 
-@media only screen and (max-width: 470px) {
+@media screen and (max-width: 470px) {
   nav {
     font-size: small;
   }
@@ -45,7 +45,7 @@ nav .logo .title {
   font-size: 2.5rem;
 }
 
-@media only screen and (max-width: 470px) {
+@media screen and (max-width: 470px) {
   nav .logo .title {
     font-size: 1.5rem;
   }
@@ -64,7 +64,7 @@ nav .nav-menu {
   height: 90%;
 }
 
-@media only screen and (max-width: 470px) {
+@media screen and (max-width: 470px) {
   nav .nav-menu {
     display: flex;
     flex-direction: column;
@@ -82,7 +82,7 @@ section {
   padding: 20px 0;
 }
 
-@media only screen and (max-width: 470px) {
+@media screen and (max-width: 470px) {
   section {
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@ section .shipping {
   padding: 10px;
 }
 
-@media only screen and (max-width: 470px) {
+@media screen and (max-width: 470px) {
   section .shipping {
     width: 90%;
   }
@@ -128,7 +128,7 @@ section .shipping form fieldset + fieldset {
   border-top: 1px solid #ddd;
 }
 
-@media only screen and (max-width: 470px) {
+@media screen and (max-width: 470px) {
   section .shipping form fieldset {
     width: 90%;
   }
@@ -187,7 +187,7 @@ section .summary {
   align-items: nill;
 }
 
-@media only screen and (max-width: 470px) {
+@media screen and (max-width: 470px) {
   section .summary {
     width: 90%;
   }
