@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9c86db6092.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Checkout-Page</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <p class="title">LEGWORK</p>
+            <p class="motto">..bcos your feet should fit</p>
+        </div>
+        <div class="nav-menu">
+            <h5 class="checkout">
+                CheckOut (1 items)
+            </h5>
+            <div class="cart">
+                <i class="fas fa-shopping-bag"></i> Back To Cart
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="shipping">
+            <div class="top">
+                <h2>SHIPPING</h2>
+                <p>Plesae provide your shipping details below</p>
+            </div>
+            <form class="form-label form-css">
+                <fieldset>
+                    <input id="firstName" name="firstName" type="text" autocomplete="on" required />
+                    <label for="firstName">First Name</label>
+                </fieldset>
+
+                <fieldset>
+                    <input id="lastName" name="lastName" type="text" autocomplete="on" required />
+                    <label for="lastName">Last Name</label>
+                </fieldset>
+
+                <fieldset>
+                    <input id="email" name="email" type="text" autocomplete="on" required />
+                    <label for="email">Email Address</label>
+                </fieldset>
+
+                <fieldset>
+                    <input id="street" name="street" type="text" autocomplete="on" required />
+                    <label for="street">Street Address</label>
+                </fieldset>
+
+                <fieldset>
+                    <input id="city" name="city" type="text" autocomplete="on" required />
+                    <label for="city">City</label>
+                </fieldset>
+
+                <fieldset>
+                    <input id="state" name="state" type="text" autocomplete="on" required />
+                    <label for="state">State</label>
+                </fieldset>
+
+                <fieldset>
+                    <input id="zip" name="zip" type="text" autocomplete="off" required />
+                    <label for="zip">ZIP</label>
+                </fieldset>
+
+                <fieldset>
+                    <input id="phone" name="phone" type="tel" autocomplete="on" required />
+                    <label for="phone">Phone Number</label>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="summary">
+            <div class="summary-top">
+                <h3 class="order">ORDER SUMMARY</h3>
+            </div>
+            <div class="details">
+                <div class="list">
+                    <p class="left">Item</p>
+                    <p class="right">Nike Retro</p>
+                </div>
+                <div class="list">
+                    <p class="left">Subtotal</p>
+                    <p class="right"># 1235.57</p>
+                </div>
+                <div class="list">
+                    <p class="left">Shiiping</p>
+                    <p class="right"># 524.00</p>
+                </div>
+                <div class="list">
+                    <p class="left">Tax</p>
+                    <p class="right"># 25.65</p>
+                </div>
+            </div>
+            <div class="total list">
+                <h4 class=" total-left">TOTAL</h4>
+                <h2 class="amount"># 18542.00</h2>
+            </div>
+        </div>
+    </section>
+    <article>
+        <button>Make Payment</button>
+    </article>
+
+</body>
+
+</html>
