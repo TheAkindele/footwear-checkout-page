@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!------ Bootstrap CSS --------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="checkout-style.css">
+    <title>CheckOut page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row main-container px-5">
+            <div class="left col-12 col-md-7 ">
+                <div class="shipping-details pt-5">SHOPPING DETAILS</div>
+                <form class='form-1 pt-3 pb-5 col-11'>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone No.</label>
+                        <input type="tel" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                </form>
+                <div class="card-details pt-4">
+                    CARD DETAILS
+                </div>
+                <form class='form-2 py-3 col-11'>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="number" placeholder="Card Number">
+                    </div>
+                    <div class="form-group double">
+                        <input type="text" class="form-control mx-1 date" id="date" placeholder="Date">
+                        <input type="text" class="form-control mx-1" id="cvv" placeholder="CVV">
+                    </div>
+                </form>
+            </div>
+
+            <div class="right col-12 col-md-5 px-5 pt-5">
+                <div class="summary py-4">
+                    <div class="order">ORDER SUMMARY</div>
+                    <div class="detail">
+                        <div class="label">Subtotal</div>
+                        <div class="amount">$260.86</div>
+                    </div>
+                    <div class="detail py-3">
+                        <div class="label">Sheeping Fee</div>
+                        <div class="amount">$810.42</div>
+                    </div>
+                    <div class="detail total">
+                        <div class="label">TOTAL</div>
+                        <div class="amount">$1426.12</div>
+                    </div>
+                    <div class="promo py-3">
+                        <input type="text" placeholder="ENTER PROMO CODE">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn my-2 bg-dark text-light">PROCEED TO PAY</button>
+                    <button type="button" class="btn mb-5 border border-secondary">CANCEL TRANSACTION</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
