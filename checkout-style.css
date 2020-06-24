@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.double{
+    display: flex;
+    justify-content: space-around;
+}
+
+.order{
+    border-top: 3px solid black;
+    padding: 10px 0;
+}
+
+.detail{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-details, .order, .shipping-details{
+    font-weight: bold;
+}
+
+.promo{
+    width: 100%;
+}
+.promo input{
+    width: 100%;
+}
+.buttons .btn{
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .right{
+        padding-top: 0;
+    }
+    .summary{
+        display: none;
+    }
+    .card-details, .order, .shipping-details{
+        text-align: center;
+    }
+    .double{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .double .date{
+        margin: 10px 0;
+    }
+}
